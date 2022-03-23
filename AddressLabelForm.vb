@@ -1,7 +1,12 @@
 ﻿Public Class AddressLabelForm
+    Dim finalLabel As String
+    Private Sub AddressLabelForm_Load(sender As Object, e As EventArgs)
+        FirstNameLabel.Text = "bing"
+    End Sub
 
+    Private Sub MailingAddressLabel_Enter(sender As Object, e As EventArgs) Handles InputGroupBox.Enter
 
-    Private Sub DisplayButton_Click(sender As Object, e As EventArgs)
-        DisplayLabel.text = $"{FirstNameTextbox.text} {LastNameTextbox.text}"
     End Sub
 End Class
+
+

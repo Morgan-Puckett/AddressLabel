@@ -22,46 +22,142 @@ Partial Class AddressLabelForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MailingAddressLabel = New System.Windows.Forms.GroupBox()
+        Me.InputGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ZipTextBox = New System.Windows.Forms.TextBox()
+        Me.ZipLabel = New System.Windows.Forms.Label()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.StateLabel = New System.Windows.Forms.Label()
+        Me.CityTextBox = New System.Windows.Forms.TextBox()
+        Me.CityLabel = New System.Windows.Forms.Label()
+        Me.StreetAddressTextBox = New System.Windows.Forms.TextBox()
+        Me.StreetAddresssLabel = New System.Windows.Forms.Label()
+        Me.LastNameTextBox = New System.Windows.Forms.TextBox()
+        Me.LastNameLabel = New System.Windows.Forms.Label()
+        Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
+        Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.MailingAddressLabel.SuspendLayout()
+        Me.InputGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MailingAddressLabel
+        'InputGroupBox
         '
-        Me.MailingAddressLabel.Controls.Add(Me.TextBox6)
-        Me.MailingAddressLabel.Controls.Add(Me.Label6)
-        Me.MailingAddressLabel.Controls.Add(Me.TextBox5)
-        Me.MailingAddressLabel.Controls.Add(Me.Label5)
-        Me.MailingAddressLabel.Controls.Add(Me.TextBox4)
-        Me.MailingAddressLabel.Controls.Add(Me.Label4)
-        Me.MailingAddressLabel.Controls.Add(Me.TextBox3)
-        Me.MailingAddressLabel.Controls.Add(Me.Label3)
-        Me.MailingAddressLabel.Controls.Add(Me.TextBox2)
-        Me.MailingAddressLabel.Controls.Add(Me.Label2)
-        Me.MailingAddressLabel.Controls.Add(Me.TextBox1)
-        Me.MailingAddressLabel.Controls.Add(Me.Label1)
-        Me.MailingAddressLabel.Location = New System.Drawing.Point(14, 28)
-        Me.MailingAddressLabel.Name = "MailingAddressLabel"
-        Me.MailingAddressLabel.Size = New System.Drawing.Size(250, 410)
-        Me.MailingAddressLabel.TabIndex = 0
-        Me.MailingAddressLabel.TabStop = False
-        Me.MailingAddressLabel.Text = "GroupBox1"
+        Me.InputGroupBox.Controls.Add(Me.ZipTextBox)
+        Me.InputGroupBox.Controls.Add(Me.ZipLabel)
+        Me.InputGroupBox.Controls.Add(Me.StateTextBox)
+        Me.InputGroupBox.Controls.Add(Me.StateLabel)
+        Me.InputGroupBox.Controls.Add(Me.CityTextBox)
+        Me.InputGroupBox.Controls.Add(Me.CityLabel)
+        Me.InputGroupBox.Controls.Add(Me.StreetAddressTextBox)
+        Me.InputGroupBox.Controls.Add(Me.StreetAddresssLabel)
+        Me.InputGroupBox.Controls.Add(Me.LastNameTextBox)
+        Me.InputGroupBox.Controls.Add(Me.LastNameLabel)
+        Me.InputGroupBox.Controls.Add(Me.FirstNameTextBox)
+        Me.InputGroupBox.Controls.Add(Me.FirstNameLabel)
+        Me.InputGroupBox.Location = New System.Drawing.Point(14, 28)
+        Me.InputGroupBox.Name = "InputGroupBox"
+        Me.InputGroupBox.Size = New System.Drawing.Size(250, 410)
+        Me.InputGroupBox.TabIndex = 0
+        Me.InputGroupBox.TabStop = False
+        Me.InputGroupBox.Text = "Mailing Address"
+        '
+        'ZipTextBox
+        '
+        Me.ZipTextBox.Location = New System.Drawing.Point(19, 349)
+        Me.ZipTextBox.Name = "ZipTextBox"
+        Me.ZipTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.ZipTextBox.TabIndex = 11
+        '
+        'ZipLabel
+        '
+        Me.ZipLabel.AutoSize = True
+        Me.ZipLabel.Location = New System.Drawing.Point(19, 326)
+        Me.ZipLabel.Name = "ZipLabel"
+        Me.ZipLabel.Size = New System.Drawing.Size(31, 20)
+        Me.ZipLabel.TabIndex = 10
+        Me.ZipLabel.Text = "Zip"
+        '
+        'StateTextBox
+        '
+        Me.StateTextBox.Location = New System.Drawing.Point(19, 295)
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.StateTextBox.TabIndex = 9
+        '
+        'StateLabel
+        '
+        Me.StateLabel.AutoSize = True
+        Me.StateLabel.Location = New System.Drawing.Point(19, 272)
+        Me.StateLabel.Name = "StateLabel"
+        Me.StateLabel.Size = New System.Drawing.Size(43, 20)
+        Me.StateLabel.TabIndex = 8
+        Me.StateLabel.Text = "State"
+        '
+        'CityTextBox
+        '
+        Me.CityTextBox.Location = New System.Drawing.Point(19, 237)
+        Me.CityTextBox.Name = "CityTextBox"
+        Me.CityTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.CityTextBox.TabIndex = 7
+        '
+        'CityLabel
+        '
+        Me.CityLabel.AutoSize = True
+        Me.CityLabel.Location = New System.Drawing.Point(19, 214)
+        Me.CityLabel.Name = "CityLabel"
+        Me.CityLabel.Size = New System.Drawing.Size(34, 20)
+        Me.CityLabel.TabIndex = 6
+        Me.CityLabel.Text = "City"
+        '
+        'StreetAddressTextBox
+        '
+        Me.StreetAddressTextBox.Location = New System.Drawing.Point(19, 177)
+        Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
+        Me.StreetAddressTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.StreetAddressTextBox.TabIndex = 5
+        '
+        'StreetAddresssLabel
+        '
+        Me.StreetAddresssLabel.AutoSize = True
+        Me.StreetAddresssLabel.Location = New System.Drawing.Point(19, 154)
+        Me.StreetAddresssLabel.Name = "StreetAddresssLabel"
+        Me.StreetAddresssLabel.Size = New System.Drawing.Size(105, 20)
+        Me.StreetAddresssLabel.TabIndex = 4
+        Me.StreetAddresssLabel.Text = "Street Address"
+        '
+        'LastNameTextBox
+        '
+        Me.LastNameTextBox.Location = New System.Drawing.Point(19, 120)
+        Me.LastNameTextBox.Name = "LastNameTextBox"
+        Me.LastNameTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.LastNameTextBox.TabIndex = 3
+        '
+        'LastNameLabel
+        '
+        Me.LastNameLabel.AutoSize = True
+        Me.LastNameLabel.Location = New System.Drawing.Point(19, 97)
+        Me.LastNameLabel.Name = "LastNameLabel"
+        Me.LastNameLabel.Size = New System.Drawing.Size(79, 20)
+        Me.LastNameLabel.TabIndex = 2
+        Me.LastNameLabel.Text = "Last Name"
+        '
+        'FirstNameTextBox
+        '
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(19, 65)
+        Me.FirstNameTextBox.Name = "FirstNameTextBox"
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.FirstNameTextBox.TabIndex = 1
+        '
+        'FirstNameLabel
+        '
+        Me.FirstNameLabel.AutoSize = True
+        Me.FirstNameLabel.Location = New System.Drawing.Point(19, 42)
+        Me.FirstNameLabel.Name = "FirstNameLabel"
+        Me.FirstNameLabel.Size = New System.Drawing.Size(84, 20)
+        Me.FirstNameLabel.TabIndex = 0
+        Me.FirstNameLabel.Text = "First Name "
         '
         'GroupBox2
         '
@@ -99,102 +195,6 @@ Partial Class AddressLabelForm
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 42)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(19, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox1.TabIndex = 1
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(19, 120)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox2.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(19, 97)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 20)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Label2"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(19, 177)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox3.TabIndex = 5
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(19, 154)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 20)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Label3"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(19, 237)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox4.TabIndex = 7
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(19, 214)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 20)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Label4"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(19, 295)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox5.TabIndex = 9
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(19, 272)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(53, 20)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Label5"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(19, 349)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox6.TabIndex = 11
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(19, 326)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(53, 20)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Label6"
-        '
         'AddressLabelForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -204,28 +204,28 @@ Partial Class AddressLabelForm
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.MailingAddressLabel)
+        Me.Controls.Add(Me.InputGroupBox)
         Me.Name = "AddressLabelForm"
         Me.Text = "Form1"
-        Me.MailingAddressLabel.ResumeLayout(False)
-        Me.MailingAddressLabel.PerformLayout()
+        Me.InputGroupBox.ResumeLayout(False)
+        Me.InputGroupBox.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents MailingAddressLabel As GroupBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents InputGroupBox As GroupBox
+    Friend WithEvents ZipTextBox As TextBox
+    Friend WithEvents ZipLabel As Label
+    Friend WithEvents StateTextBox As TextBox
+    Friend WithEvents StateLabel As Label
+    Friend WithEvents CityTextBox As TextBox
+    Friend WithEvents CityLabel As Label
+    Friend WithEvents StreetAddressTextBox As TextBox
+    Friend WithEvents StreetAddresssLabel As Label
+    Friend WithEvents LastNameTextBox As TextBox
+    Friend WithEvents LastNameLabel As Label
+    Friend WithEvents FirstNameTextBox As TextBox
+    Friend WithEvents FirstNameLabel As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
