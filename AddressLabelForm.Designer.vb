@@ -35,11 +35,32 @@ Partial Class AddressLabelForm
         Me.LastNameLabel = New System.Windows.Forms.Label()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameLabel = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.OutputGroupBox = New System.Windows.Forms.GroupBox()
+        Me.DisplayLabel = New System.Windows.Forms.Label()
+        Me.DisplayButton = New System.Windows.Forms.Button()
+        Me.ClearButton = New System.Windows.Forms.Button()
+        Me.ExitButton = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.TipsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StreetAddressToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnterYourStreetAddressToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnterTheStateInWhichYourCityResidesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ZipToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FirstAndLastNameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DisplayLabelButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearsGivenInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitButtonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClosesTheProgramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InputGroupBox.SuspendLayout()
+        Me.OutputGroupBox.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'InputGroupBox
@@ -58,7 +79,7 @@ Partial Class AddressLabelForm
         Me.InputGroupBox.Controls.Add(Me.FirstNameLabel)
         Me.InputGroupBox.Location = New System.Drawing.Point(14, 28)
         Me.InputGroupBox.Name = "InputGroupBox"
-        Me.InputGroupBox.Size = New System.Drawing.Size(250, 410)
+        Me.InputGroupBox.Size = New System.Drawing.Size(348, 410)
         Me.InputGroupBox.TabIndex = 0
         Me.InputGroupBox.TabStop = False
         Me.InputGroupBox.Text = "Mailing Address"
@@ -67,7 +88,7 @@ Partial Class AddressLabelForm
         '
         Me.ZipTextBox.Location = New System.Drawing.Point(19, 349)
         Me.ZipTextBox.Name = "ZipTextBox"
-        Me.ZipTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.ZipTextBox.Size = New System.Drawing.Size(213, 27)
         Me.ZipTextBox.TabIndex = 11
         '
         'ZipLabel
@@ -83,7 +104,7 @@ Partial Class AddressLabelForm
         '
         Me.StateTextBox.Location = New System.Drawing.Point(19, 295)
         Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.StateTextBox.Size = New System.Drawing.Size(213, 27)
         Me.StateTextBox.TabIndex = 9
         '
         'StateLabel
@@ -99,7 +120,7 @@ Partial Class AddressLabelForm
         '
         Me.CityTextBox.Location = New System.Drawing.Point(19, 237)
         Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.CityTextBox.Size = New System.Drawing.Size(213, 27)
         Me.CityTextBox.TabIndex = 7
         '
         'CityLabel
@@ -115,7 +136,7 @@ Partial Class AddressLabelForm
         '
         Me.StreetAddressTextBox.Location = New System.Drawing.Point(19, 177)
         Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
-        Me.StreetAddressTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.StreetAddressTextBox.Size = New System.Drawing.Size(213, 27)
         Me.StreetAddressTextBox.TabIndex = 5
         '
         'StreetAddresssLabel
@@ -131,7 +152,7 @@ Partial Class AddressLabelForm
         '
         Me.LastNameTextBox.Location = New System.Drawing.Point(19, 120)
         Me.LastNameTextBox.Name = "LastNameTextBox"
-        Me.LastNameTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.LastNameTextBox.Size = New System.Drawing.Size(213, 27)
         Me.LastNameTextBox.TabIndex = 3
         '
         'LastNameLabel
@@ -147,7 +168,7 @@ Partial Class AddressLabelForm
         '
         Me.FirstNameTextBox.Location = New System.Drawing.Point(19, 65)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(125, 27)
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(213, 27)
         Me.FirstNameTextBox.TabIndex = 1
         '
         'FirstNameLabel
@@ -159,57 +180,195 @@ Partial Class AddressLabelForm
         Me.FirstNameLabel.TabIndex = 0
         Me.FirstNameLabel.Text = "First Name "
         '
-        'GroupBox2
+        'OutputGroupBox
         '
-        Me.GroupBox2.Location = New System.Drawing.Point(348, 74)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(250, 125)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.OutputGroupBox.Controls.Add(Me.DisplayLabel)
+        Me.OutputGroupBox.Location = New System.Drawing.Point(368, 28)
+        Me.OutputGroupBox.Name = "OutputGroupBox"
+        Me.OutputGroupBox.Size = New System.Drawing.Size(417, 320)
+        Me.OutputGroupBox.TabIndex = 1
+        Me.OutputGroupBox.TabStop = False
+        Me.OutputGroupBox.Text = "Address Label"
         '
-        'Button1
+        'DisplayLabel
         '
-        Me.Button1.Location = New System.Drawing.Point(478, 412)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 29)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DisplayLabel.AutoSize = True
+        Me.DisplayLabel.Location = New System.Drawing.Point(6, 42)
+        Me.DisplayLabel.Name = "DisplayLabel"
+        Me.DisplayLabel.Size = New System.Drawing.Size(13, 20)
+        Me.DisplayLabel.TabIndex = 0
+        Me.DisplayLabel.Text = " "
         '
-        'Button2
+        'DisplayButton
         '
-        Me.Button2.Location = New System.Drawing.Point(624, 375)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(94, 29)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.DisplayButton.Location = New System.Drawing.Point(368, 354)
+        Me.DisplayButton.Name = "DisplayButton"
+        Me.DisplayButton.Size = New System.Drawing.Size(135, 84)
+        Me.DisplayButton.TabIndex = 2
+        Me.DisplayButton.Text = "Display Label"
+        Me.DisplayButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'ClearButton
         '
-        Me.Button3.Location = New System.Drawing.Point(701, 294)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(94, 29)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ClearButton.Location = New System.Drawing.Point(509, 354)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(135, 84)
+        Me.ClearButton.TabIndex = 3
+        Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = True
+        '
+        'ExitButton
+        '
+        Me.ExitButton.Location = New System.Drawing.Point(650, 354)
+        Me.ExitButton.Name = "ExitButton"
+        Me.ExitButton.Size = New System.Drawing.Size(135, 84)
+        Me.ExitButton.TabIndex = 4
+        Me.ExitButton.Text = "Exit"
+        Me.ExitButton.UseVisualStyleBackColor = True
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.TabIndex = 5
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'TipsToolStripMenuItem
+        '
+        Me.TipsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StreetAddressToolStripMenuItem, Me.CityToolStripMenuItem, Me.StateToolStripMenuItem, Me.ZipToolStripMenuItem, Me.FirstAndLastNameToolStripMenuItem, Me.DisplayLabelButtonToolStripMenuItem, Me.ClearButtonToolStripMenuItem, Me.ExitButtonToolStripMenuItem})
+        Me.TipsToolStripMenuItem.Name = "TipsToolStripMenuItem"
+        Me.TipsToolStripMenuItem.Size = New System.Drawing.Size(50, 24)
+        Me.TipsToolStripMenuItem.Text = "Tips"
+        '
+        'StreetAddressToolStripMenuItem
+        '
+        Me.StreetAddressToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnterYourStreetAddressToolStripMenuItem})
+        Me.StreetAddressToolStripMenuItem.Name = "StreetAddressToolStripMenuItem"
+        Me.StreetAddressToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.StreetAddressToolStripMenuItem.Text = "Street Address"
+        '
+        'EnterYourStreetAddressToolStripMenuItem
+        '
+        Me.EnterYourStreetAddressToolStripMenuItem.Name = "EnterYourStreetAddressToolStripMenuItem"
+        Me.EnterYourStreetAddressToolStripMenuItem.Size = New System.Drawing.Size(259, 26)
+        Me.EnterYourStreetAddressToolStripMenuItem.Text = "Enter your Street Address"
+        '
+        'CityToolStripMenuItem
+        '
+        Me.CityToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem})
+        Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
+        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.CityToolStripMenuItem.Text = "City"
+        '
+        'EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem
+        '
+        Me.EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem.Name = "EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem"
+        Me.EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem.Size = New System.Drawing.Size(422, 26)
+        Me.EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem.Text = "Enter the City you would like the mail delivered to"
+        '
+        'StateToolStripMenuItem
+        '
+        Me.StateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnterTheStateInWhichYourCityResidesToolStripMenuItem})
+        Me.StateToolStripMenuItem.Name = "StateToolStripMenuItem"
+        Me.StateToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.StateToolStripMenuItem.Text = "State"
+        '
+        'EnterTheStateInWhichYourCityResidesToolStripMenuItem
+        '
+        Me.EnterTheStateInWhichYourCityResidesToolStripMenuItem.Name = "EnterTheStateInWhichYourCityResidesToolStripMenuItem"
+        Me.EnterTheStateInWhichYourCityResidesToolStripMenuItem.Size = New System.Drawing.Size(358, 26)
+        Me.EnterTheStateInWhichYourCityResidesToolStripMenuItem.Text = "Enter The state in which your city resides"
+        '
+        'ZipToolStripMenuItem
+        '
+        Me.ZipToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem})
+        Me.ZipToolStripMenuItem.Name = "ZipToolStripMenuItem"
+        Me.ZipToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.ZipToolStripMenuItem.Text = "Zip"
+        '
+        'EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem
+        '
+        Me.EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem.Name = "EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem"
+        Me.EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem.Size = New System.Drawing.Size(432, 26)
+        Me.EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem.Text = "Enter the Zip code of the associtated City and State"
+        '
+        'FirstAndLastNameToolStripMenuItem
+        '
+        Me.FirstAndLastNameToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem})
+        Me.FirstAndLastNameToolStripMenuItem.Name = "FirstAndLastNameToolStripMenuItem"
+        Me.FirstAndLastNameToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.FirstAndLastNameToolStripMenuItem.Text = "First and Last Name"
+        '
+        'NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem
+        '
+        Me.NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem.Name = "NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem"
+        Me.NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem.Size = New System.Drawing.Size(472, 26)
+        Me.NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem.Text = "Name of the person the mail is being deivered to or from"
+        '
+        'DisplayLabelButtonToolStripMenuItem
+        '
+        Me.DisplayLabelButtonToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem})
+        Me.DisplayLabelButtonToolStripMenuItem.Name = "DisplayLabelButtonToolStripMenuItem"
+        Me.DisplayLabelButtonToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.DisplayLabelButtonToolStripMenuItem.Text = "Display Label Button"
+        '
+        'DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem
+        '
+        Me.DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem.Name = "DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem"
+        Me.DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem.Size = New System.Drawing.Size(574, 26)
+        Me.DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem.Text = "Displays the given information in the appropiate mailing address fashion"
+        '
+        'ClearButtonToolStripMenuItem
+        '
+        Me.ClearButtonToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearsGivenInformationToolStripMenuItem})
+        Me.ClearButtonToolStripMenuItem.Name = "ClearButtonToolStripMenuItem"
+        Me.ClearButtonToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.ClearButtonToolStripMenuItem.Text = "Clear Button"
+        '
+        'ClearsGivenInformationToolStripMenuItem
+        '
+        Me.ClearsGivenInformationToolStripMenuItem.Name = "ClearsGivenInformationToolStripMenuItem"
+        Me.ClearsGivenInformationToolStripMenuItem.Size = New System.Drawing.Size(254, 26)
+        Me.ClearsGivenInformationToolStripMenuItem.Text = "Clears given Information"
+        '
+        'ExitButtonToolStripMenuItem
+        '
+        Me.ExitButtonToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClosesTheProgramToolStripMenuItem})
+        Me.ExitButtonToolStripMenuItem.Name = "ExitButtonToolStripMenuItem"
+        Me.ExitButtonToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.ExitButtonToolStripMenuItem.Text = "Exit Button"
+        '
+        'ClosesTheProgramToolStripMenuItem
+        '
+        Me.ClosesTheProgramToolStripMenuItem.Name = "ClosesTheProgramToolStripMenuItem"
+        Me.ClosesTheProgramToolStripMenuItem.Size = New System.Drawing.Size(221, 26)
+        Me.ClosesTheProgramToolStripMenuItem.Text = "Closes the program"
         '
         'AddressLabelForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.ExitButton)
+        Me.Controls.Add(Me.ClearButton)
+        Me.Controls.Add(Me.DisplayButton)
+        Me.Controls.Add(Me.OutputGroupBox)
         Me.Controls.Add(Me.InputGroupBox)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AddressLabelForm"
         Me.Text = "Form1"
         Me.InputGroupBox.ResumeLayout(False)
         Me.InputGroupBox.PerformLayout()
+        Me.OutputGroupBox.ResumeLayout(False)
+        Me.OutputGroupBox.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -226,8 +385,27 @@ Partial Class AddressLabelForm
     Friend WithEvents LastNameLabel As Label
     Friend WithEvents FirstNameTextBox As TextBox
     Friend WithEvents FirstNameLabel As Label
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents OutputGroupBox As GroupBox
+    Friend WithEvents DisplayButton As Button
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents ExitButton As Button
+    Friend WithEvents DisplayLabel As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents TipsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StreetAddressToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CityToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ZipToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FirstAndLastNameToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DisplayLabelButtonToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearButtonToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitButtonToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnterYourStreetAddressToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnterTheCityYouWouldLikeTheMailDeliveredToToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnterTheStateInWhichYourCityResidesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnterTheZipCodeOfTheAssocitatedCityAndStateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NameOfThePersonTheMailIsBeingDeiveredToOrFromToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DisplaysTheGivenInformationInTheAppropiateMailingAddressToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearsGivenInformationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClosesTheProgramToolStripMenuItem As ToolStripMenuItem
 End Class
